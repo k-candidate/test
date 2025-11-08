@@ -1,0 +1,6 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  call-deployment:
+    uses: k-candidate/gha-workflows/.github/workflows/test.yaml@main

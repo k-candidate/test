@@ -1,6 +1,13 @@
 on:
   workflow_dispatch:
+    inputs:
+      TEST_VAR:
+        description: 'test var'
+        required: false
+        default: 'blablabla'
 
 jobs:
   call-deployment:
     uses: k-candidate/gha-workflows/.github/workflows/test.yaml@main
+    with:
+      OR_VAR: ${{ github.event.inputs.TEST_VAR }}

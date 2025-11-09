@@ -7,7 +7,8 @@ jobs:
   deploy:
     uses: k-candidate/gha-workflows/.github/workflows/deployment-pipeline.yaml@main
     with:
-      project_id: ${{ secrets.GCP_PROJECT_ID }}
-      region: "us-east1"
-      service_account_key: ${{ secrets.GCP_SA_KEY }}
+      region: "us-east1"      
       terraform_directory: "."
+    secrets:
+      project_id: ${{ secrets.GCP_PROJECT_ID }}
+      service_account_key: ${{ secrets.GCP_SA_KEY }}

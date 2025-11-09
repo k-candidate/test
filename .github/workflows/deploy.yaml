@@ -9,6 +9,6 @@ jobs:
     with:
       region: "us-east1"      
       terraform_directory: "."
-    secrets:
       project_id: ${{ secrets.GCP_PROJECT_ID }}
+    secrets:
       service_account_key: ${{ secrets.GCP_SA_KEY }}
